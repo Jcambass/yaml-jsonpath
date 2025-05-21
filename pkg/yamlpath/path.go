@@ -464,9 +464,9 @@ func recursiveFilterThen(filterLexemes []lexeme, p *Path) *Path {
 }
 
 func fromIterators(its ...iter.Seq[*yaml.Node]) iter.Seq[*yaml.Node] {
-	return func(yeild func(*yaml.Node) bool) {
+	return func(yield func(*yaml.Node) bool) {
 		for _, seq := range its {
-			seq(yeild)
+			seq(yield)
 		}
 	}
 }
